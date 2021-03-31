@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(fileUpload());
 
 if (process.env.NODE_ENV !== 'PRODUCTION') {
-  require('dotenv').config({ path: 'backend/config/config.env' });
+  require('dotenv').config();
 }
 
 app.use('/api/v1/', productRouter);
